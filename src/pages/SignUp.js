@@ -51,7 +51,6 @@ const SignUpForm = () => {
           onChange={handleInputChange}
         />
       </div>
-      <br />
       <div>
               <label htmlFor="lastName">Last name: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
               <input
@@ -62,7 +61,6 @@ const SignUpForm = () => {
                 onChange={handleInputChange}
               />
             </div>
-            <br />
       <div>
                     <label htmlFor="buildingNumber">Building number: &nbsp;</label>
                     <input
@@ -73,7 +71,6 @@ const SignUpForm = () => {
                       onChange={handleInputChange}
                     />
                   </div>
-                  <br />
            <div>
                                <label htmlFor="houseNumber">House number: &nbsp;&nbsp;&nbsp;</label>
                                <input
@@ -84,7 +81,6 @@ const SignUpForm = () => {
                                  onChange={handleInputChange}
                                />
                              </div>
-           <br />
            <div>
 
         <label htmlFor="emailAddress">Email Address: &nbsp;&nbsp;&nbsp;&nbsp;</label>
@@ -96,7 +92,6 @@ const SignUpForm = () => {
           onChange={handleInputChange}
         />
       </div>
-      <br />
        <div>
                                      <label htmlFor="phoneNumber">Phone number:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
                                      <input
@@ -107,7 +102,6 @@ const SignUpForm = () => {
                                        onChange={handleInputChange}
                                      />
                                    </div>
-                                   <br />
       <div>
         <label htmlFor="password">Password:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
         <input
@@ -118,8 +112,10 @@ const SignUpForm = () => {
           onChange={handleInputChange}
         />
       </div>
-      <br />
       <button type="submit">Sign Up</button>
+      <div>
+      Sign up Form
+      </div>
     </form>
   );
 };

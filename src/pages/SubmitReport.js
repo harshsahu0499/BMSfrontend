@@ -50,7 +50,6 @@ const ReportForm = () => {
           onChange={handleInputChange}
         />
       </div>
-      <br />
       <div>
         <label htmlFor="location">Location:</label>
         <input
@@ -61,7 +60,6 @@ const ReportForm = () => {
           onChange={handleInputChange}
         />
       </div>
-      <br />
       <div>
         <label htmlFor="description">Description:</label>
         <textarea
@@ -71,7 +69,6 @@ const ReportForm = () => {
           onChange={handleInputChange}
         />
       </div>
-      <br />
       <div>
         <label htmlFor="priority">Priority:</label>
         <select
@@ -86,7 +83,6 @@ const ReportForm = () => {
           <option value="low">Low</option>
         </select>
       </div>
-      <br />
       <div>
         <label htmlFor="image">Image:</label>
         <input
@@ -96,8 +92,8 @@ const ReportForm = () => {
           onChange={handleInputChange}
         />
       </div>
-      <br />
       <button type="submit">Submit Report</button>
+      <div> submit report form </div>
     </form>
   );
 };

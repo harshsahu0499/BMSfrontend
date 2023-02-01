@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 //import { useHistory } from "react-router-dom";
+import "../styles/Login.css";
 
  const Login = () => {
    const [emailAddress, setEmailAddress] = useState("");
@@ -33,6 +34,8 @@ import React, { useState } from "react";
 
    return (
      <form onSubmit={handleSubmit}>
+     <div>
+     <div>
        <label>
          &nbsp;&nbsp; Email address:
          &nbsp;&nbsp;&nbsp;
@@ -42,8 +45,8 @@ import React, { useState } from "react";
            onChange={(event) => setEmailAddress(event.target.value)}
          />
        </label>
-       <br />
-       <br />
+       </div>
+       <div>
        <label>
          &nbsp;&nbsp; Password:
          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -53,15 +56,16 @@ import React, { useState } from "react";
            onChange={(event) => setPassword(event.target.value)}
          />
        </label>
-       <br />
-       <br />
-
+       </div>
+       <div>
        &nbsp;&nbsp; <button type="submit"> Login</button>
-       <br />
-       <br />
+        </div>
+        <div>
 
        <label> &nbsp;&nbsp; don't have an account &nbsp;&nbsp;
        </label> <button type="submit"> SignUp</button>
+       </div>
+       </div>
      </form>
    );
  };

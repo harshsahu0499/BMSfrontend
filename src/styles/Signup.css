@@ -1,0 +1,13 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.left-element {
+  width: 50%;
+}
+
+.right-element {
+  width: 50%;
+}
