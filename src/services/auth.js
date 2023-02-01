@@ -1,8 +1,8 @@
 import axios from './axios';
 
-export const register = async (form) => {
+export const signup = async (form) => {
     try {
-        return await axios.post('/users', form);
+        return await axios.post('/signup', form);
     } catch(error) {
         return error
     }
@@ -18,7 +18,7 @@ export const login = async (form) => {
 
 export const getMe = async (token) => {
     try {
-        return await axios.get('/auth/me', {
+        return await axios.get('/me', {
             headers: { Authorization: token }
         });
     } catch(error) {
@@ -28,7 +28,7 @@ export const getMe = async (token) => {
 
 export const logout = async () => {
     try {
-        return await axios.delete('/auth/logout');
+        return await axios.delete('/logout');
     } catch(error) {
         return error.response
     }
