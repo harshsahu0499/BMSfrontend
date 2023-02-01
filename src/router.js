@@ -22,21 +22,22 @@ const Router = () => {
     <BrowserRouter>
     <Header />
         <Routes>
+            <Route exact path="/" render={(props) => <Login {...props} />}  element={<Default>
+            <Login />
+            </Default>}/>
+            <Route exact path="/reports" component={SubmitReport} element={ <Default>
+                                                                                            <Home />
+                                                                                          </Default> }/>
 
-            <Route path="/" element={<Default>
-              <Login />
-            </Default>} />
             <Route path="/logout" element={<Default>
               <Logout />
             </Default>} />
             <Route path="/SignUp" element={<Default>
                <SignUp />
             </Default>} />
-            <Route path="/SubmitReport" element={<Default>
-                <SubmitReport />
-            </Default>} />
-             <Route path="/reports" element={ <Default>
-                          <Home />
+
+             <Route path="/submitreport" element={ <Default>
+                          <SubmitReport />
                         </Default> } />
 
         </Routes>
