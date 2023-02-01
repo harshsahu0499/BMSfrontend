@@ -1,0 +1,1 @@
+const rootReducer = (state = {}, action) => state;
