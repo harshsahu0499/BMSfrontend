@@ -37,10 +37,10 @@ const Default = ({children, privated=false}) => {
     <div id="default">
       <nav>
 
-          <Link to="/"> Login   |  </Link>
-          <Link to="/signup"> SignUp |  </Link>
-          <Link to="/submitreport"> Submit Report |  </Link>
-          <Link to="/reports"> View Reports </Link>
+          <Link to="/"> &nbsp;&nbsp; Login &nbsp;&nbsp;  |  </Link>
+          <Link to="/signup"> &nbsp;&nbsp; SignUp &nbsp;&nbsp; |  </Link>
+          <Link to="/submitreport"> &nbsp;&nbsp; Submit Report &nbsp;&nbsp; |  </Link>
+          <Link to="/reports"> &nbsp;&nbsp; View Reports &nbsp;&nbsp; </Link>
           <br></br>
           <br></br>
 

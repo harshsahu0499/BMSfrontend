@@ -5,7 +5,7 @@ const Footer = () => {
     return (
         <footer className={classes.bottom}>
             <p className="text-center text-light">
-                Building Management System / EPITA Spring 2022
+                Building Management System @EPITA Spring 2022 SE
             </p>
         </footer>
     );

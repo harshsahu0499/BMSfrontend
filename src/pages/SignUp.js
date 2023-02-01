@@ -42,7 +42,7 @@ const SignUpForm = () => {
   return (
     <form onSubmit={handleSubmit}>
       <div>
-        <label htmlFor="firstName">First name:</label>
+        <label htmlFor="firstName">First name: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
         <input
           type="text"
           id="firstName"
@@ -53,7 +53,7 @@ const SignUpForm = () => {
       </div>
       <br />
       <div>
-              <label htmlFor="lastName">Last name:</label>
+              <label htmlFor="lastName">Last name: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
               <input
                 type="text"
                 id="lastName"
@@ -64,7 +64,7 @@ const SignUpForm = () => {
             </div>
             <br />
       <div>
-                    <label htmlFor="buildingNumber">Building number:</label>
+                    <label htmlFor="buildingNumber">Building number: &nbsp;</label>
                     <input
                       type="text"
                       id="buildingNumber"
@@ -75,7 +75,7 @@ const SignUpForm = () => {
                   </div>
                   <br />
            <div>
-                               <label htmlFor="houseNumber">House number:</label>
+                               <label htmlFor="houseNumber">House number: &nbsp;&nbsp;&nbsp;</label>
                                <input
                                  type="text"
                                  id="houseNumber"
@@ -87,7 +87,7 @@ const SignUpForm = () => {
            <br />
            <div>
 
-        <label htmlFor="emailAddress">Email Address:</label>
+        <label htmlFor="emailAddress">Email Address: &nbsp;&nbsp;&nbsp;&nbsp;</label>
         <input
           type="email"
           id="emailAddress"
@@ -98,7 +98,7 @@ const SignUpForm = () => {
       </div>
       <br />
        <div>
-                                     <label htmlFor="phoneNumber">Phone number:</label>
+                                     <label htmlFor="phoneNumber">Phone number:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
                                      <input
                                        type="text"
                                        id="phoneNumber"
@@ -109,7 +109,7 @@ const SignUpForm = () => {
                                    </div>
                                    <br />
       <div>
-        <label htmlFor="password">Password:</label>
+        <label htmlFor="password">Password:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
         <input
           type="password"
           id="password"

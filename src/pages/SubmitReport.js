@@ -40,11 +40,12 @@ const ReportForm = () => {
   return (
     <form onSubmit={handleSubmit}>
       <div>
-        <label htmlFor="userId">User ID:</label>
+      <label htmlFor="userId">User ID:</label>
         <input
           type="text"
           id="userId"
           name="userId"
+          disabled
           value={formData.userId}
           onChange={handleInputChange}
         />

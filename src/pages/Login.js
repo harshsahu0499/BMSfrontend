@@ -10,6 +10,7 @@ import React, { useState } from "react";
      event.preventDefault();
 
      try {
+     console.log("here inside try block");
        const response = await fetch(`http://localhost:8080/api/v1/users/email/${emailAddress}`, {
          method: "GET",
        });
@@ -33,7 +34,8 @@ import React, { useState } from "react";
    return (
      <form onSubmit={handleSubmit}>
        <label>
-         Email address:
+         &nbsp;&nbsp; Email address:
+         &nbsp;&nbsp;&nbsp;
          <input
            type="email"
            value={emailAddress}
@@ -43,7 +45,8 @@ import React, { useState } from "react";
        <br />
        <br />
        <label>
-         Password:
+         &nbsp;&nbsp; Password:
+         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
          <input
            type="password"
            value={password}
@@ -52,7 +55,13 @@ import React, { useState } from "react";
        </label>
        <br />
        <br />
-       <button type="submit">Login</button>
+
+       &nbsp;&nbsp; <button type="submit"> Login</button>
+       <br />
+       <br />
+
+       <label> &nbsp;&nbsp; don't have an account &nbsp;&nbsp;
+       </label> <button type="submit"> SignUp</button>
      </form>
    );
  };
