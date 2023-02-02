@@ -48,7 +48,7 @@ import "../styles/Login.css";
 
 
              console.log("Login successful");
-             window.location.href = "/reportsadmin";
+             window.location.href = "/viewreportadmin";
              // history.push("/reports");
                } catch (error) {
 

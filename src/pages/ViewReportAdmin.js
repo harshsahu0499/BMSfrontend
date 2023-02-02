@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "../styles/Notification.css";
 
-const ViewUserReport = () => {
+const ViewAdminReport = () => {
   const [status, setStatus] = useState("");
   const [data, setData] = useState([]);
   const [userId, setUserId] = useState("");
@@ -71,7 +71,7 @@ const handleInputChange = (e) => {
                     <td>High</td>
                     <td>Open</td>
                     <td>2023-02-01</td>
-                    <td><img src="brokenWindow.png" width="120px" height="100px"></img></td>
+                    <td>brokenWindow.png</td>
                     <td><button> Send Message </button> </td>
                     <td><button> Update Report </button> </td>
 
@@ -82,7 +82,7 @@ const handleInputChange = (e) => {
                     <td>High</td>
                     <td>Open</td>
                     <td>2023-01-31</td>
-                    <td>img2</td>
+                    <td>wet_floor_20230202.jpg</td>
                     <td><button> Send Message </button> </td>
                     <td><button> Update Report </button> </td>
             </tr>
@@ -92,7 +92,7 @@ const handleInputChange = (e) => {
                     <td>High</td>
                     <td>Closed</td>
                     <td>2023-02-02</td>
-                    <td>img3.png</td>
+                    <td> </td>
                     <td><button> Send Message </button> </td>
                     <td><button> Update Report </button> </td>
             </tr>
@@ -102,4 +102,4 @@ const handleInputChange = (e) => {
   );
 };
 
-export default ViewUserReport;
+export default ViewAdminReport;

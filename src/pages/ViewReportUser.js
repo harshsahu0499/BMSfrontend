@@ -78,7 +78,7 @@ const handleInputChange = (e) => {
                     <td>High</td>
                     <td>Open</td>
                     <td>2023-02-01</td>
-                    <td><img src="brokenWindow.png" width="120px" height="100px"></img></td>
+                    <td>brokenWindow.png</td>
 
             </tr>
             <tr>
@@ -86,14 +86,15 @@ const handleInputChange = (e) => {
                     <td>High</td>
                     <td>Open</td>
                     <td>2023-01-31</td>
-                    <td>img2</td>
+                    <td>wet_floor_20230202.jpg</td>
             </tr>
             <tr>
                     <td>Heater is not working</td>
                     <td>High</td>
                     <td>Closed</td>
                     <td>2023-02-02</td>
-                    <td>img3.png</td>
+                    <td> </td>
+
             </tr>
         </tbody>
       </table>

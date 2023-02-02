@@ -46,7 +46,7 @@ import "../styles/Login.css";
 
 
              console.log("Login successful");
-             window.location.href = "/notification";
+             window.location.href = "/notifications";
 
              // history.push("/reports");
                } catch (error) {

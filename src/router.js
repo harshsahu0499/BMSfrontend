@@ -71,9 +71,9 @@ const Router = () => {
                                                               <CreateNotification />
                                                             </AdminLayout> } />
 
-                            <Route path="/viewreportadmin" element={ <Default>
+                            <Route path="/viewreportadmin" element={ <AdminLayout>
                                                                                    <ViewReportAdmin />
-                                                                                 </Default> } />
+                                                                                 </AdminLayout> } />
 
                         </Routes>
 
