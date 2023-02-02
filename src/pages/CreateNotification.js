@@ -3,9 +3,10 @@ import React, { useState } from "react";
 const CreateNotification = () => {
   const [adminId, setAdminId] = useState("");
   const [description, setDescription] = useState("");
+  const [endTime, setEndTime] = useState("");
   const [eventDate, setEventDate] = useState("");
   const [startTime, setStartTime] = useState("");
-  const [endTime, setEndTime] = useState("");
+
 
   const handleSubmit = async () => {
 

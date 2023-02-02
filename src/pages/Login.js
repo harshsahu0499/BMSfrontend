@@ -22,7 +22,7 @@ import "../styles/Login.css";
                 const user = await response.json();
                         if (user.password !== password) {
                         //window.alert("Password does not match!");
-                        alert("Password does not match!");
+                        alert("Incorrect password, try again!");
                         window.location.href = "/";
                         return;
                          }

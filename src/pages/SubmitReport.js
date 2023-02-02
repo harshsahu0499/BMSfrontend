@@ -8,6 +8,7 @@ const ReportForm = () => {
     priority: "",
     image: "",
     dateTime: new Date(),
+    status:"Open"
   });
 
   const handleInputChange = (event) => {
@@ -30,8 +31,8 @@ const ReportForm = () => {
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
-        alert("Thank you for reporting, We will get back you")
-        window.location.href = "/reports";
+        alert("Thank you for reporting, We will get back to you")
+        window.location.href = "/notifications";
         // handle success or error response from the backend
       })
       .catch((error) => {
@@ -118,6 +119,25 @@ const ReportForm = () => {
 
 
       </div>
+
+       <div>
+            <table>
+            <tr>
+              <td>   <select
+                             id="status"
+                             name="status"
+                             hidden
+                             value={formData.priority}
+                             onChange={handleInputChange}
+                           >
+                             <option value="">-- Select report status --</option>
+                             <option value="Open">High</option>
+                             <option value="Closed">Medium</option>
+                           </select>
+              </td>
+            </tr>
+            </table>
+            </div>
 
       <button type="submit">Submit Report</button>
       <div> submit report form </div>
