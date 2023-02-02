@@ -33,7 +33,7 @@ import {setAuth} from '../slices/authSlice';
 //    getData();
 //  }, []);
 
-const Default = ({children, privated=false}) => {
+const AdminDefault = ({children, privated=false}) => {
   let dispatch = useDispatch()
   let navigate = useNavigate()
   const {isAuth} = useSelector((state) => state.auth);
@@ -62,14 +62,9 @@ const Default = ({children, privated=false}) => {
   }, []);
 
   return (
-    <div id="default">
+    <div id="AdminDefault">
       <nav>
-          <Link to="/"> &nbsp;&nbsp; User Login &nbsp;&nbsp;  </Link>
-          {isAuth && <>
-          <Link to="/notifications"> &nbsp;&nbsp; Notifications &nbsp;&nbsp; | </Link>
-           <Link to="/submitreport"> &nbsp;&nbsp; Submit Report &nbsp;&nbsp; |  </Link>
-          </>}
-
+          <Link to="/adminlogin"> &nbsp;&nbsp; Admin Login &nbsp;&nbsp;  </Link>
           <br></br>
           <br></br>
 
@@ -81,4 +76,4 @@ const Default = ({children, privated=false}) => {
   )
 }
 
-export default Default;
+export default AdminDefault;

@@ -15,7 +15,7 @@ import "../styles/Login.css";
 
            console.log("here inside try block");
            console.log({emailAddress} != "");
-             const response = await fetch(`http://localhost:8080/api/v1/users/email/${emailAddress}`, {
+             const response = await fetch(`http://localhost:8080/api/v1/admins/email/${emailAddress}`, {
                method: "GET",
              });
 
@@ -46,12 +46,12 @@ import "../styles/Login.css";
 
 
              console.log("Login successful");
-             window.location.href = "/notification";
+             window.location.href = "/reportsadmin";
              // history.push("/reports");
                } catch (error) {
 
                 window.alert("You are new user, please sign up!");
-                window.location.href = "/signup";
+                window.location.href = "/signupadmin";
                  console.error(error);
                }
 
@@ -59,7 +59,7 @@ import "../styles/Login.css";
    return (
      <form onSubmit={handleSubmit}>
      <div>
-     <h1>User Login</h1>
+     <h1>Admin Login</h1>
      <div>
        <label htmlFor="emailAddress">
          &nbsp;&nbsp; Email address:
