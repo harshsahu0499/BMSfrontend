@@ -19,26 +19,28 @@ import "../styles/Login.css";
                method: "GET",
              });
 
+             if ({emailAddress} == "" || {password} == "") {
+                          window.alert("Email or Password is empty");
+                                                   window.location.href = "/";
+                                                   return;
+
+                          }
+
                 const user = await response.json();
-                        if (user.password !== password) {
+                        if (user.password != "" && user.password !== password ) {
                         //window.alert("Password does not match!");
-                        alert("Incorrect password, please try again!");
+                        window.alert("Incorrect password, please try again!");
                         window.location.href = "/adminlogin";
                         return;
                          }
-             if ({emailAddress} == "" || {password} == "") {
-             alert("Email or Password is empty");
-                                      window.location.href = "/";
-                                      return;
 
-             }
 
              if (!response.ok) {
                           //setMsg('You do not have a user account, Please sign up');
                           //window.location.href = "/reports";
                           window.alert("Please sign up!");
                           window.location.href = "/signupadmin";
-                          //return;
+                          return;
 
                           }
 
@@ -50,8 +52,7 @@ import "../styles/Login.css";
              // history.push("/reports");
                } catch (error) {
 
-                window.alert("You are new user, please sign up!");
-                window.location.href = "/signupadmin";
+
                  console.error(error);
                }
 

@@ -65,11 +65,9 @@ const Default = ({children, privated=false}) => {
     <div id="default">
       <nav>
           <Link to="/"> &nbsp;&nbsp; User Login &nbsp;&nbsp; |   </Link>
-           <Link to="/submitreport"> &nbsp;&nbsp; Submit Report &nbsp;&nbsp; |  </Link>
-           <Link to="/notifications"> &nbsp;&nbsp; Notifications &nbsp;&nbsp; | </Link>
+           <Link to="/notifications"> &nbsp;&nbsp; View Notifications &nbsp;&nbsp; | </Link>
+            <Link to="/submitreport"> &nbsp;&nbsp; Submit Report &nbsp;&nbsp; |  </Link>
            <Link to="/viewreportuser"> &nbsp;&nbsp; View Reports &nbsp;&nbsp; |  </Link>
-
-
           <br></br>
           <br></br>
 

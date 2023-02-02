@@ -32,7 +32,7 @@ const Router = () => {
                     <Route exact path="/" render={(props) => <Login {...props} />}  element={<Default>
                     <Login />
                     </Default>}/>
-                    <Route exact path="/notification" component={Notification} element={ <Default privated={true}>
+                    <Route exact path="/notifications" component={Notification} element={ <Default>
                                                                                                                 <Notification />
                                                                                                               </Default> }/>
 

@@ -1,13 +1,11 @@
 import React, { useState, useEffect } from "react";
+import "../styles/Login.css";
 
 const ViewUserReport = () => {
   const [status, setStatus] = useState("");
   const [data, setData] = useState([]);
   const [userId, setUserId] = useState("");
-  const [formData, setFormData] = useState({
-      userId: 1,
-      status:"Open"
-    });
+  const [formData, setFormData] = useState("");
 
 const handleInputChange = (e) => {
     setFormData({
@@ -30,8 +28,7 @@ const handleInputChange = (e) => {
       setData(data);
     } catch (error) {
 
-                   window.alert("You are new user, please sign up!");
-                   window.location.href = "/signup";
+
                     console.error(error);
                   }
 
@@ -56,7 +53,7 @@ const handleInputChange = (e) => {
           value={status}
           onChange={(e) => setStatus(e.target.value)}
         >
-          <option value="Open">Select</option>
+          <option value="">Open</option>
           <option value="open">Open</option>
           <option value="closed">Closed</option>
         </select>
@@ -91,6 +88,7 @@ const handleInputChange = (e) => {
                     <td>High</td>
                     <td>Open</td>
                     <td>2023-01-31</td>
+                    <td>img2</td>
             </tr>
             <tr>
                     <td>3</td>
@@ -98,8 +96,8 @@ const handleInputChange = (e) => {
                     <td>High</td>
                     <td>Open</td>
                     <td>2023-02-02</td>
+                    <td>img3.png</td>
             </tr>
-
         </tbody>
       </table>
     </div>

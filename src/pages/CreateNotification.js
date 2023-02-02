@@ -1,53 +1,58 @@
 import React, { useState } from "react";
 
-const CreateNotification = () => {
-  const [adminId, setAdminId] = useState("");
-  const [description, setDescription] = useState("");
-  const [endTime, setEndTime] = useState("");
-  const [eventDate, setEventDate] = useState("");
-  const [startTime, setStartTime] = useState("");
+const CreateNotificationForm = () => {
+const [formData, setFormData] = useState({
+    adminId: 1,
+    description: "",
+    endTime: "",
+    eventDate: "",
+    startTime: "",
+  });
 
+  const handleInputChange = (event) => {
+    setFormData({
+      ...formData,
+      [event.target.name]: event.target.value,
+    });
+  };
 
-  const handleSubmit = async () => {
+  const handleSubmit = (event) => {
+    event.preventDefault();
 
-  // API call to the Java backend to insert a report
-      fetch(`http://localhost:8080/api/v1/notifications/createnotification`,
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-       body: JSON.stringify({
-               adminId,
-               description,
-                endTime,
-               eventDate,
-               startTime,
-             }),
+    // API call to the Java backend to sign up a new user
+    fetch("http://localhost:8080/api/v1/notifications/createnotification", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+        window.alert("Notification created successfully")
+        window.location.href = "/createnotification";
+        // handle success or error response from the backend
       })
-        .then((response) => response.json())
-        .then((data) => {
-          console.log(data);
-          alert("Successfully created notification!")
-          window.location.href = "/notification";
-          // handle success or error response from the backend
-        })
-        .catch((error) => {
-          console.error(error);
-        });
-    };
+      .catch((error) => {
+        console.error(error);
+      });
+  };
+
 
 
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
       <div>
+
 
         <input
           type="number"
           hidden
           id="adminId"
-          value={adminId}
-          onChange={(e) => setAdminId(e.target.value)}
+          name="adminId"
+          value={1}
+          onChange={handleInputChange}
         />
       </div>
       <div>
@@ -55,35 +60,39 @@ const CreateNotification = () => {
         <input
           type="text"
           id="description"
-          value={description}
-          onChange={(e) => setDescription(e.target.value)}
+          name="description"
+          value={formData.description}
+          onChange={handleInputChange}
         />
       </div>
       <div>
         <label htmlFor="eventDate">Date:</label>
         <input
           type="text"
+          name="eventDate"
           id="eventDate"
-          value={eventDate}
-          onChange={(e) => setEventDate(e.target.value)}
+          value={formData.eventDate}
+          onChange={handleInputChange}
         />
       </div>
       <div>
         <label htmlFor="startTime">Start Time:</label>
         <input
           type="text"
+          name="startTime"
           id="startTime"
-          value={startTime}
-          onChange={(e) => setStartTime(e.target.value)}
+          value={formData.startTime}
+          onChange={handleInputChange}
         />
       </div>
       <div>
         <label htmlFor="endTime">End Time:</label>
         <input
           type="text"
+          name="endTime"
           id="endTime"
-          value={endTime}
-          onChange={(e) => setEndTime(e.target.value)}
+          value={formData.endTime}
+          onChange={handleInputChange}
                             />
                           </div>
 
@@ -93,4 +102,4 @@ const CreateNotification = () => {
   );
 };
 
-export default CreateNotification;
+export default CreateNotificationForm;
