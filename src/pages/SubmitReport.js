@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 const ReportForm = () => {
   const [formData, setFormData] = useState({
-    userId: "",
+    userId: 1,
     location: "",
     description: "",
     priority: "",
@@ -20,7 +20,7 @@ const ReportForm = () => {
     event.preventDefault();
 
     // API call to the Java backend to insert a report
-    fetch("http://localhost:8080/api/v1/submitreports/", {
+    fetch(`http://localhost:8080/api/v1/reports/submitreports/`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -30,6 +30,8 @@ const ReportForm = () => {
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
+        alert("Thank you for reporting, We will get back you")
+        window.location.href = "/reports";
         // handle success or error response from the backend
       })
       .catch((error) => {
@@ -40,58 +42,83 @@ const ReportForm = () => {
   return (
     <form onSubmit={handleSubmit}>
       <div>
-      <label htmlFor="userId">User ID:</label>
         <input
-          type="text"
+          type="number"
           id="userId"
           name="userId"
-          disabled
+          hidden
           value={formData.userId}
           onChange={handleInputChange}
         />
+
+      <table>
+      <tr><label htmlFor="location"> Location:</label> </tr>
+      <tr> <input
+                     type="text"
+                     id="location"
+                     name="location"
+                     value={formData.location}
+                     onChange={handleInputChange}
+                   />
+                   </tr></table>
+
+
       </div>
+
       <div>
-        <label htmlFor="location">Location:</label>
-        <input
-          type="text"
-          id="location"
-          name="location"
-          value={formData.location}
-          onChange={handleInputChange}
-        />
+      <table >
+      <tr><label htmlFor="description"> Description:</label></tr>
+      <tr><textarea
+                    id="description"
+                    name="description"
+                    value={formData.description}
+                    onChange={handleInputChange}
+                  /></tr>
+      </table>
+
+
       </div>
+
+
       <div>
-        <label htmlFor="description">Description:</label>
-        <textarea
-          id="description"
-          name="description"
-          value={formData.description}
-          onChange={handleInputChange}
-        />
+      <table>
+      <tr>
+        <td> <label htmlFor="priority">Priority:</label></td>
+        <td>   <select
+                       id="priority"
+                       name="priority"
+                       value={formData.priority}
+                       onChange={handleInputChange}
+                     >
+                       <option value="">-- Select a priority --</option>
+                       <option value="high">High</option>
+                       <option value="medium">Medium</option>
+                       <option value="low">Low</option>
+                     </select>
+        </td>
+      </tr>
+      </table>
       </div>
+        <br />
       <div>
-        <label htmlFor="priority">Priority:</label>
-        <select
-          id="priority"
-          name="priority"
-          value={formData.priority}
-          onChange={handleInputChange}
-        >
-          <option value="">-- Select a priority --</option>
-          <option value="high">High</option>
-          <option value="medium">Medium</option>
-          <option value="low">Low</option>
-        </select>
+      <table>
+      <tr>
+         <label htmlFor="image">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Image:</label>
+      </tr>
+
+      <tr> <input
+                       type="file"
+                       id="image"
+                       name="image"
+                       onChange={handleInputChange}
+                     />
+
+      </tr>
+      </table>
+
+
       </div>
-      <div>
-        <label htmlFor="image">Image:</label>
-        <input
-          type="file"
-          id="image"
-          name="image"
-          onChange={handleInputChange}
-        />
-      </div>
+
       <button type="submit">Submit Report</button>
       <div> submit report form </div>
     </form>

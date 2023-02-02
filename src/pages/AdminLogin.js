@@ -23,7 +23,7 @@ import "../styles/Login.css";
                         if (user.password !== password) {
                         //window.alert("Password does not match!");
                         alert("Password does not match!");
-                        window.location.href = "/";
+                        window.location.href = "/adminlogin";
                         return;
                          }
              if ({emailAddress} == "" || {password} == "") {
@@ -37,7 +37,7 @@ import "../styles/Login.css";
                           //setMsg('You do not have a user account, Please sign up');
                           //window.location.href = "/reports";
                           window.alert("Please sign up!");
-                          window.location.href = "/signup";
+                          window.location.href = "/signupadmin";
                           //return;
 
                           }

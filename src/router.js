@@ -9,6 +9,7 @@ import SignUp from './pages/SignUp';
 import AdminSignUp from './pages/SignUpAdmin';
 import SubmitReport from './pages/SubmitReport'
 import Notification from './pages/Notification'
+import CreateNotification from './pages/CreateNotification'
 
 
 import { Nav, Navbar } from "react-bootstrap";
@@ -42,7 +43,7 @@ const Router = () => {
                        <SignUp />
                     </Default>} />
 
-                     <Route path="/submitreport" element={ <Default privated={true}>
+                     <Route path="/submitreport" element={ <Default>
                                   <SubmitReport />
                                 </Default> } />
 
@@ -52,10 +53,6 @@ const Router = () => {
                             <Route exact path="/adminlogin" render={(props) => <AdminLogin {...props} />}  element={<AdminLayout>
                             <AdminLogin />
                             </AdminLayout>}/>
-                            <Route exact path="/notification" component={Notification} element={ <AdminLayout privated={true}>
-                                                                                                                        <Notification />
-                                                                                                                      </AdminLayout> }/>
-
 
                             <Route path="/logout" element={<AdminLayout>
                               <Logout />
@@ -63,6 +60,10 @@ const Router = () => {
                             <Route path="/signupadmin" element={<AdminLayout>
                                <AdminSignUp />
                             </AdminLayout>} />
+
+                            <Route path="/createnotification" element={ <AdminLayout>
+                                                              <CreateNotification />
+                                                            </AdminLayout> } />
 
 
 
