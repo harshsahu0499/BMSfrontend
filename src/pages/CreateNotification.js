@@ -56,44 +56,62 @@ const [formData, setFormData] = useState({
         />
       </div>
       <div>
-        <label htmlFor="description">Description:</label>
-        <input
-          type="text"
-          id="description"
-          name="description"
-          value={formData.description}
-          onChange={handleInputChange}
-        />
+
+      <table >
+            <tr><label htmlFor="description"> Description:</label></tr>
+            <tr><textarea
+                          id="description"
+                          name="description"
+                          value={formData.description}
+                          onChange={handleInputChange}
+                        /></tr>
+          </table>
       </div>
       <div>
-        <label htmlFor="eventDate">Date:</label>
-        <input
-          type="text"
-          name="eventDate"
-          id="eventDate"
-          value={formData.eventDate}
-          onChange={handleInputChange}
-        />
+      <table>
+      <tr>
+       <label htmlFor="eventDate">Date:</label>
+      </tr>
+      <tr>
+      <input
+                type="text"
+                name="eventDate"
+                id="eventDate"
+                value={formData.eventDate}
+                onChange={handleInputChange}
+              />
+      </tr>
+      </table>
+
+
       </div>
       <div>
-        <label htmlFor="startTime">Start Time:</label>
-        <input
-          type="text"
-          name="startTime"
-          id="startTime"
-          value={formData.startTime}
-          onChange={handleInputChange}
-        />
+      <table>
+      <tr><label htmlFor="startTime">Start Time:</label></tr>
+      <tr><input
+                    type="text"
+                    name="startTime"
+                    id="startTime"
+                    value={formData.startTime}
+                    onChange={handleInputChange}
+                  /></tr>
+      </table>
+
+
       </div>
       <div>
-        <label htmlFor="endTime">End Time:</label>
-        <input
-          type="text"
-          name="endTime"
-          id="endTime"
-          value={formData.endTime}
-          onChange={handleInputChange}
-                            />
+      <table>
+      <tr><label htmlFor="endTime">End Time:</label></tr>
+      <tr><input
+                    type="text"
+                    name="endTime"
+                    id="endTime"
+                    value={formData.endTime}
+                    onChange={handleInputChange}
+                                      /></tr>
+      </table>
+
+
                           </div>
 
 <button type="submit">Create Notification</button>

@@ -62,11 +62,11 @@ const AdminDefault = ({children, privated=false}) => {
   }, []);
 
   return (
-    <div id="AdminDefault">
+    <div id="AdminDefault" class="cent">
       <nav>
-          <Link to="/adminlogin"> &nbsp;&nbsp; Admin Login &nbsp;&nbsp; | </Link>
-          <Link to="/createnotification"> &nbsp;&nbsp; Create Notifications &nbsp;&nbsp; | </Link>
-          <Link to="/viewreportadmin"> &nbsp;&nbsp; View Reports &nbsp;&nbsp;  </Link>
+          <button class="button"><Link to="/adminlogin">  Admin Login </Link> </button>
+          <button class="button"><Link to="/createnotification">  Create Notifications </Link> </button>
+          <button class="button"><Link to="/viewreportadmin"> View Reports  </Link> </button>
           <br></br>
           <br></br>
 
