@@ -11,7 +11,7 @@ const Header = () => {
         <React.Fragment>
             <Navbar  expand="lg" className={classes.bg_nav} >
                 <Navbar.Brand href="/" className={[classes.Brand, classes.nav_text]}>
-                    <div className={classes.nav_logo} class="cent">
+                    <div className={classes.nav_logo} class="image">
                         <img src={logo} alt="Logo"  />
                     </div>
                     {/* Movies App */}

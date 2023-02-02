@@ -4,6 +4,7 @@ import {useSelector, useDispatch} from 'react-redux';
 
 import { getMe } from '../services/auth';
 import {setAuth} from '../slices/authSlice';
+import "../styles/Default.css";
 
 //const Default = ({children, privated=false}) => {
 //  let dispatch = useDispatch()
@@ -62,12 +63,12 @@ const Default = ({children, privated=false}) => {
   }, []);
 
   return (
-    <div id="default">
+    <div id="default" class="cent">
       <nav>
-          <Link to="/"> &nbsp;&nbsp; User Login &nbsp;&nbsp; |   </Link>
-           <Link to="/notifications"> &nbsp;&nbsp; View Notifications &nbsp;&nbsp; | </Link>
-            <Link to="/submitreport"> &nbsp;&nbsp; Submit Report &nbsp;&nbsp; |  </Link>
-           <Link to="/viewreportuser"> &nbsp;&nbsp; View Reports &nbsp;&nbsp; |  </Link>
+          <button class="button" ><Link to="/">User Login</Link></button>
+           <button class="button" ><Link to="/notifications">View Notifications</Link></button>
+            <button class="button" ><Link to="/submitreport">Submit Report</Link></button>
+           <button class="button" ><Link to="/viewreportuser">View Reports</Link></button>
           <br></br>
           <br></br>
 
