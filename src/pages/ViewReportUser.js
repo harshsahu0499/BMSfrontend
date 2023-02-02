@@ -82,7 +82,7 @@ const handleInputChange = (e) => {
                     <td>High</td>
                     <td>Open</td>
                     <td>2023-02-01</td>
-                    <th><img src="Desktop" alt="image is not available"></img><th>
+                    <td><img src="C:\\School\\Action Learning\\broken_window.PNG" alt="image is not available" width="120px" height="100px"></img></td>
 
             </tr>
             <tr>
