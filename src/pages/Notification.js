@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import "../styles/Login.css";
+import "../styles/Notification.css";
+
 
 const Notification = () => {
   const [data, setData] = useState([]);
@@ -36,40 +37,33 @@ const handleInputChange = (e) => {
     <div>
       <form onSubmit={handleSubmit}>
       </form>
-      <table>
+      <table id="tab">
         <thead>
           <tr>
-            <th>ID</th>
             <th>Description</th>
             <th>Date</th>
             <th>Start Time</th>
             <th>End Time</th>
-
-
           </tr>
         </thead>
         <tbody>
-
-
             <tr>
-
-                    <td>General Meeting</td>
-                    <td>2023-02-10</td>
-                    <td>09:00AM</td>
-                    <td>11:00AM</td>
-
+              <td>Group meeting about energy control, heating in the common room at the basement.</td>
+              <td>2023-02-10</td>
+              <td>09:00AM</td>
+              <td>11:00AM</td>
             </tr>
             <tr>
-                     <td>Trash collection</td>
-                                        <td>2023-02-14</td>
-                                        <td>07:00AM</td>
-                                        <td>07:30AM</td>
+              <td>Trash collection</td>
+              <td>2023-02-14</td>
+              <td>07:00AM</td>
+              <td>07:30AM</td>
             </tr>
             <tr>
-                     <td>Trash collection</td>
-                                        <td>2023-02-23</td>
-                                        <td>07:00AM</td>
-                                        <td>07:30AM</td>
+              <td>Chinese New Year Celebration!</td>
+              <td>2023-02-23</td>
+              <td>07:00AM</td>
+              <td>07:30AM</td>
             </tr>
         </tbody>
       </table>

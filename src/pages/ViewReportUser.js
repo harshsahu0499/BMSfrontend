@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "../styles/Login.css";
+import "../styles/Notification.css";
 
 const ViewUserReport = () => {
   const [status, setStatus] = useState("");
@@ -53,15 +53,15 @@ const handleInputChange = (e) => {
           value={status}
           onChange={(e) => setStatus(e.target.value)}
         >
-          <option value="">Open</option>
+          <option value="">All</option>
           <option value="open">Open</option>
           <option value="closed">Closed</option>
         </select>
       </form>
-      <table>
+      <table id="tab">
         <thead>
           <tr>
-            <th>ID</th>
+
             <th>Description</th>
             <th>Priority</th>
             <th>Status</th>
@@ -74,16 +74,14 @@ const handleInputChange = (e) => {
 
 
             <tr>
-                    <td>1</td>
                     <td>Broken window</td>
                     <td>High</td>
                     <td>Open</td>
                     <td>2023-02-01</td>
-                    <td><img src="C:\\School\\Action Learning\\broken_window.PNG" alt="image is not available" width="120px" height="100px"></img></td>
+                    <td><img src="brokenWindow.png" width="120px" height="100px"></img></td>
 
             </tr>
             <tr>
-                    <td>2</td>
                     <td>Wet floor</td>
                     <td>High</td>
                     <td>Open</td>
@@ -91,10 +89,9 @@ const handleInputChange = (e) => {
                     <td>img2</td>
             </tr>
             <tr>
-                    <td>3</td>
                     <td>Heater is not working</td>
                     <td>High</td>
-                    <td>Open</td>
+                    <td>Closed</td>
                     <td>2023-02-02</td>
                     <td>img3.png</td>
             </tr>
