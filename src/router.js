@@ -11,6 +11,7 @@ import SubmitReport from './pages/SubmitReport'
 import Notification from './pages/Notification'
 import CreateNotification from './pages/CreateNotification'
 import ViewReportUser from './pages/ViewReportUser'
+import ViewReportAdmin from './pages/ViewReportAdmin'
 
 
 import { Nav, Navbar } from "react-bootstrap";
@@ -70,7 +71,9 @@ const Router = () => {
                                                               <CreateNotification />
                                                             </AdminLayout> } />
 
-
+                            <Route path="/viewreportadmin" element={ <Default>
+                                                                                   <ViewReportAdmin />
+                                                                                 </Default> } />
 
                         </Routes>
 

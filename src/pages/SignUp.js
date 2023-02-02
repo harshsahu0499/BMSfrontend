@@ -32,7 +32,7 @@ const SignUpForm = () => {
       .then((response) => response.json())
       .then((data) => {
         console.log(data);
-        window.location.href = "/reports";
+        window.location.href = "/viewreportuser";
         // handle success or error response from the backend
       })
       .catch((error) => {
