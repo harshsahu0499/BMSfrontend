@@ -11,7 +11,8 @@ const CreateNotification = () => {
   const handleSubmit = async () => {
 
   // API call to the Java backend to insert a report
-      fetch(`http://localhost:8080/api/v1/notifications/createnotification`, {
+      fetch(`http://localhost:8080/api/v1/notifications/createnotification`,
+      {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -82,7 +83,7 @@ const CreateNotification = () => {
           type="text"
           id="endTime"
           value={endTime}
-          onChange={(e) => setStartTime(e.target.value)}
+          onChange={(e) => setEndTime(e.target.value)}
                             />
                           </div>
 

@@ -10,6 +10,7 @@ import AdminSignUp from './pages/SignUpAdmin';
 import SubmitReport from './pages/SubmitReport'
 import Notification from './pages/Notification'
 import CreateNotification from './pages/CreateNotification'
+import ViewReportUser from './pages/ViewReportUser'
 
 
 import { Nav, Navbar } from "react-bootstrap";
@@ -42,10 +43,14 @@ const Router = () => {
                     <Route path="/SignUp" element={<Default>
                        <SignUp />
                     </Default>} />
-
+                    <Route path="/viewreportuser" element={ <Default>
+                                                       <ViewReportUser />
+                                                     </Default> } />
                      <Route path="/submitreport" element={ <Default>
                                   <SubmitReport />
                                 </Default> } />
+
+
 
                 </Routes>
 

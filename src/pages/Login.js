@@ -22,7 +22,7 @@ import "../styles/Login.css";
                 const user = await response.json();
                         if (user.password !== password) {
                         //window.alert("Password does not match!");
-                        alert("Incorrect password, try again!");
+                        alert("Incorrect password, please try again!");
                         window.location.href = "/";
                         return;
                          }
@@ -84,7 +84,11 @@ import "../styles/Login.css";
        </label>
        </div>
        <div>
-       &nbsp;&nbsp; <button type="submit"> Login</button>
+       <table>
+       <tr>&nbsp;&nbsp; <button type="submit"> Login</button></tr>
+       <br />
+       <tr><u> Forgot Password?</u></tr>
+       </table>
         </div>
         <div>
 
