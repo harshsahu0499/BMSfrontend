@@ -2,7 +2,7 @@ import {useEffect, useState} from 'react'
 import {useSelector} from 'react-redux'
 
 import {getMe} from '../services/auth'
-import Chucknorris from '../components/Chucknorris'
+
 
 const Home = () => {
   const {user, token} = useSelector((state) => state.auth);
@@ -26,7 +26,6 @@ const Home = () => {
       Display all open incidents here in a table(date time/ description / status ) with a link {name}
     </h1>
 
-    /*<Chucknorris />*/
   </>)
 }
 

@@ -62,8 +62,8 @@ const handleInputChange = (e) => {
             <tr>
               <td>Chinese New Year Celebration!</td>
               <td>2023-02-23</td>
-              <td>07:00AM</td>
-              <td>07:30AM</td>
+              <td>07:00PM</td>
+              <td>08:00PM</td>
             </tr>
         </tbody>
       </table>
